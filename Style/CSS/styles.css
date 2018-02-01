@@ -6,7 +6,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 0px;
-  border-top: solid black 1px;
+  border-top: solid beige 1px;
   box-shadow: 10px 0 8px -8px black, -10px 0 8px -8px black;
 }
 
@@ -36,6 +36,7 @@ body {
   text-decoration: none;
   color: LightSkyBlue;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 #header_login a:hover {
@@ -156,4 +157,26 @@ body {
 
 #footer a:hover {
   text-decoration: underline;
+}
+
+.link_style {
+  text-decoration: none;
+  font-family: 'Merriweather', serif;
+  color:LightSkyBlue;
+}
+
+#signin_extra {
+  font-size: 10px;
+}
+
+#signin_extra:hover {
+  text-decoration: underline;
+}
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.merri {
+  font-family: 'Merriweather', serif;
 }
