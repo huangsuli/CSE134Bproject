@@ -10,7 +10,7 @@
   padding: 25px 25px;
 }
 
-.button_center {
+.button_marg_low {
   margin: 5px 0px;
 }
 
@@ -21,4 +21,17 @@
 #login_title {
   font-weight: bold;
   font-size: 25px;
+}
+
+#login_back {
+  text-decoration: none;
+  float:right;
+  font-size: 18px;
+  font-weight: bold;
+  color: DodgerBlue;
+  margin: -13px -5px;
+}
+
+#login_back:hover {
+  text-decoration: underline;
 }
