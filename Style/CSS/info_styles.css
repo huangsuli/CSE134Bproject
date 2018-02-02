@@ -1,0 +1,44 @@
+.info_container {
+  width: 80%;
+  margin-left: 25px;
+
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+
+}
+
+.info_container table {
+  margin: 0 auto;
+  width: 99%;
+  text-align:left;
+
+  font-weight:normal;
+  font-size: 15px;
+  border-collapse: collapse;
+}
+
+.info_container th, .info_container td {
+  border-bottom: 1px solid grey;
+  padding: 8px 5px;
+  margin: 2px 0px;
+}
+
+.info_container tr:hover {
+  border-bottom: 1px solid grey;
+  transition: all 0.3s ease-in-out;
+  background-color: DarkTurquoise;
+  opacity: 0.7;
+  color: white;
+}
+
+.last_tr th, .last_tr td {
+  border-bottom: none;
+}
+
+.container_spread {
+  padding: 15px 0px 5px 0px;
+}
+
+.table_header {
+  text-align: center;
+}

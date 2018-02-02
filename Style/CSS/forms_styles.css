@@ -2,14 +2,22 @@
     width: 400px;
 }
 
+<<<<<<< HEAD
 .blue_inputs input[type="text"] {
+=======
+.blue_inputs input[type="text"], .blue_inputs input[type="email"], .blue_inputs textarea, .blue_inputs input[type="password"] {
+>>>>>>> 1c1a27ee3d3156b5aa562747c41c4f0e60cdff84
   width: 80%;
   padding: 3px 0px;
   padding-left: 5px;
   margin: 3px 0px 10px 0px;
 
   font-size: 15px;
+<<<<<<< HEAD
   color: GoldenRod;
+=======
+  color: DarkOrange;
+>>>>>>> 1c1a27ee3d3156b5aa562747c41c4f0e60cdff84
   font-weight: bold;
   font-family: 'Merriweather', serif;
 
@@ -21,14 +29,22 @@
 
 }
 
+<<<<<<< HEAD
 .blue_inputs input[type="text"]:focus {
+=======
+.blue_inputs input[type="text"]:focus, .blue_inputs input[type="email"]:focus, .blue_inputs textarea:focus, .blue_inputs input[type="password"]:focus {
+>>>>>>> 1c1a27ee3d3156b5aa562747c41c4f0e60cdff84
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 
   border: 2px solid rgba(81, 203, 238, 1);
 }
 
 .blue_dropbox select {
+<<<<<<< HEAD
   color: Goldenrod;
+=======
+  color: DarkOrange;
+>>>>>>> 1c1a27ee3d3156b5aa562747c41c4f0e60cdff84
   background-color: white;
   padding: 5px 5px;
   border: 2px solid #DDDDDD;

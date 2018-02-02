@@ -51,6 +51,45 @@ body {
   margin-top: 3px;
 }
 
+<<<<<<< HEAD
+=======
+#menu {
+  width: 100%;
+  padding: 10px 0px 25px 0px;
+  border-bottom: 1px black solid;
+  box-shadow: 0 5px 8px -6px black;
+  text-align: center;
+}
+
+#menu_container {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#menu_container a {
+  text-decoration: none;
+
+  display: inline-block;
+  text-align: center;
+
+  padding: 10px 15px 3px 15px;;
+  box-shadow: 0 6px 8px -6px black;
+
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: DarkTurquoise;
+  opacity: 0.8;
+
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#menu_container a:hover {
+  box-shadow: 0 6px 8px -6px Orange;
+}
+
+>>>>>>> 1c1a27ee3d3156b5aa562747c41c4f0e60cdff84
 #title {
   float: left;
   margin-top: 18px;
@@ -116,11 +155,19 @@ body {
   color: #008CBA;
 
   cursor: pointer;
+<<<<<<< HEAD
   -webkit-transition: all 0.5s ease;
 
   -moz-transition: all 0.5s ease;
 
   transition: all 0.5s ease;
+=======
+  -webkit-transition: color 0.5s ease;
+
+  -moz-transition: color 0.5s ease;
+
+  transition: color 0.5s ease;
+>>>>>>> 1c1a27ee3d3156b5aa562747c41c4f0e60cdff84
 }
 
 .big_blue_button a:hover {
