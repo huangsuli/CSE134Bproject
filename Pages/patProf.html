@@ -1,19 +1,116 @@
 <html>
   <head>
     <title>Patient Profile Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../Style/CSS/info_styles.css">
+    <link rel="stylesheet" href="../Style/CSS/styles.css">
+    <link rel="stylesheet" href="../Style/CSS/forms_styles.css">
   </head>
   <body>
     <div id="header">
+      <div id="title_block">
+        <img id="doc_pic" src="../Style/Pictures/male_doctor.png" />
+        <h1 id="title"> WebMD </h1>
+      </div>
+      <div id="header_login">
+        <a href="index.html"> Log out </a>
+      </div>
     </div>
 
     <div id="menu">
+      <div id="menu_container">
+        <a>Profile</a>
+        <a>Edit Profile</a>
+        <a>Make Request</a>
+        <a>Request Status</a>
+        <a>History</a>
+      </div>
     </div>
 
     <div id="body">
+      <div class="article">
+        <div class="article_title">
+          <h3>Profile information</h3>
+          <div class="info_container roboto">
+            <table>
+
+              <tr>
+                <th>Name</th>
+                <td>Ben Chafik</td>
+              </tr>
+
+              <tr>
+                  <th>Date of birth</th>
+                  <td>01/01/1994</td>
+              </tr>
+
+              <tr class="last_tr">
+                <th>Gender</th>
+                <td>Male</td>
+
+              </tr>
+
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="article">
+        <div class="article_title">
+          <h3>Edit Information</h3>
+        </div>
+        <div class="info_container container_spread roboto">
+          <div class="form blue_inputs blue_dropbox roboto">
+            First Name :<br />
+            <input type="text" name="user_first"/> <br />
+
+            Last Name : <br />
+            <input type="text" name-"user_last"/> <br />
+
+            Birthday : <br />
+            <select name="bd_month">
+              <option value="" selected disabled hidden>MM</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+            </select>
+            <select name="bd_day">
+              <option value="" selected disabled hidden>DD</option>
+              <option>01</option>
+              <option>02</option>
+              <option>03</option>
+              <option>04</option>
+              <option>05</option>
+            </select>
+            <input id="input_year" type="text" maxlength="4" name="bd_year" placeholder="YYYY"/> <br />
+
+            Gender <br />
+            <input type="radio" name="gender" value="male" checked/> Male
+            <input type="radio" name="gender" value="female"/> Female <br />
+
+            <div class="form_button">
+              <input class="medium_blue_r_button" type="submit" value="Sign up"/>
+              <button class="medium_blue_r_button button_left_marg" >Clear Form</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="article">
+      </div>
     </div>
 
+
     <div id="footer">
+      <div id="footer_left">
+        &copy; WebMD LLC. All rights reserved 2018.
+      </div>
+      <div id="footer_right">
+        <a href="index.html">About us</a>
+        <a href="index.html">Contact us</a>
+      </div>
     </div>
   </body>
 </html>

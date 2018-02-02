@@ -9,7 +9,7 @@
   margin: 3px 0px 10px 0px;
 
   font-size: 15px;
-  color: GoldenRod;
+  color: DarkOrange;
   font-weight: bold;
   font-family: 'Merriweather', serif;
 
@@ -28,7 +28,7 @@
 }
 
 .blue_dropbox select {
-  color: Goldenrod;
+  color: DarkOrange;
   background-color: white;
   padding: 5px 5px;
   border: 2px solid #DDDDDD;
