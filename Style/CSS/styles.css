@@ -152,11 +152,11 @@ body {
   color: #008CBA;
 
   cursor: pointer;
-  -webkit-transition: all 0.5s ease;
+  -webkit-transition: color 0.5s ease;
 
-  -moz-transition: all 0.5s ease;
+  -moz-transition: color 0.5s ease;
 
-  transition: all 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 .big_blue_button a:hover {
