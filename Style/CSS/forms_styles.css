@@ -2,103 +2,83 @@
     width: 400px;
 }
 
-<<<<<<< HEAD
-.blue_inputs input[type="text"] {
-=======
-.blue_inputs input[type="text"], .blue_inputs input[type="email"], .blue_inputs textarea, .blue_inputs input[type="password"] {
->>>>>>> 1c1a27ee3d3156b5aa562747c41c4f0e60cdff84
-  width: 80%;
-  padding: 3px 0px;
-  padding-left: 5px;
-  margin: 3px 0px 10px 0px;
-
-  font-size: 15px;
-<<<<<<< HEAD
-  color: GoldenRod;
-=======
-  color: DarkOrange;
->>>>>>> 1c1a27ee3d3156b5aa562747c41c4f0e60cdff84
-  font-weight: bold;
-  font-family: 'Merriweather', serif;
-
-  -webkit-transition: all 0.30s ease-in-out;
-  -moz-transition: all 0.30s ease-in-out;
-  transition: all 0.30s ease-in-out;
-  outline: none;
-  border: 2px solid #DDDDDD;
-
+.blue_inputs input[type="text"],
+.blue_inputs input[type="email"],
+.blue_inputs textarea,
+.blue_inputs input[type="password"] {
+    width: 80%;
+    padding: 3px 0px;
+    padding-left: 5px;
+    margin: 3px 0px 10px 0px;
+    font-size: 15px;
+    color: DarkOrange;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 2px solid #DDDDDD;
 }
 
-<<<<<<< HEAD
-.blue_inputs input[type="text"]:focus {
-=======
-.blue_inputs input[type="text"]:focus, .blue_inputs input[type="email"]:focus, .blue_inputs textarea:focus, .blue_inputs input[type="password"]:focus {
->>>>>>> 1c1a27ee3d3156b5aa562747c41c4f0e60cdff84
-  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-
-  border: 2px solid rgba(81, 203, 238, 1);
+.blue_inputs input[type="text"]:focus,
+.blue_inputs input[type="email"]:focus,
+.blue_inputs textarea:focus,
+.blue_inputs input[type="password"]:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 2px solid rgba(81, 203, 238, 1);
 }
 
 .blue_dropbox select {
-<<<<<<< HEAD
-  color: Goldenrod;
-=======
-  color: DarkOrange;
->>>>>>> 1c1a27ee3d3156b5aa562747c41c4f0e60cdff84
-  background-color: white;
-  padding: 5px 5px;
-  border: 2px solid #DDDDDD;
-  font-family: 'Merriweather', serif;
-  font-weight: bold;
-
-  -webkit-transition: all 0.30s ease-in-out;
-  -moz-transition: all 0.30s ease-in-out;
-  transition: all 0.30s ease-in-out;
-  outline: none;
+    color: DarkOrange;
+    background-color: white;
+    padding: 5px 5px;
+    border: 2px solid #DDDDDD;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+    outline: none;
 }
 
 .blue_dropbox select:focus {
-  background-color: white;
-  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-  border: 2px solid rgba(81, 203, 238, 1);
+    background-color: white;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 2px solid rgba(81, 203, 238, 1);
 }
 
 #input_year {
-  padding: 4px 5px 6px 5px;
-  width: 60px;
+    padding: 4px 5px 6px 5px;
+    width: 60px;
 }
 
 .medium_blue_r_button {
-  padding: 10px 15px;
-
-  border: 2px solid #008CBA;
-  outline: none;
-
-  background-color: white;
-  font-family: 'Merriweather', serif;
-  font-size: 15px;
-  margin: 15px 0px 10px 20px;
-  font-weight: bold;
-  color: #008CBA;
-
-  -webkit-transition: color 0.5s ease;
-
-  -moz-transition: color 0.5s ease;
-
-  transition: color 0.5s ease;
+    padding: 10px 15px;
+    border: 2px solid #008CBA;
+    outline: none;
+    background-color: white;
+    font-family: 'Merriweather', serif;
+    font-size: 15px;
+    margin: 15px 0px 10px 20px;
+    font-weight: bold;
+    color: #008CBA;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    transition: color 0.5s ease;
 }
 
 .medium_blue_r_button:hover {
-  color: white;
-  box-shadow: inset 230px 0 0 0 LightSkyBlue;
+    color: white;
+    box-shadow: inset 230px 0 0 0 LightSkyBlue;
 }
 
 .medium_blue_r_button:active {
-  color: white;
-  box-shadow: inset 230px 0 0 0 LightSkyBlue;
-  border: inset 2px #008CBA;
+    color: white;
+    box-shadow: inset 230px 0 0 0 LightSkyBlue;
+    border: inset 2px #008CBA;
 }
 
 .button_left_marg {
-  margin-left: 5px;
+    margin-left: 5px;
 }

@@ -2,8 +2,9 @@
 
 <head>
     <title>Rating Patient Interaction</title>
-    <link rel="stylesheet" href="../Style/CSS/rateStyle.css">
-    <link rel="stylesheet" href="../Style/CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="../Style/CSS/rate_style.css">
+    <link rel="stylesheet" type="text/css" href="../Style/CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="../Style/CSS/forms_styles.css">
 </head>
 
 <body>
@@ -17,14 +18,51 @@
         </div>
     </div>
 
-
-    <div id="body">
-        <div class="rating">
-            <input name="myrating" type="radio" value="5" /><span>☆</span><input name="myrating" type="radio" value="4" /><span>☆</span><input name="myrating" type="radio" value="3" /><span>☆</span><input name="myrating" type="radio" value="2" /><span>☆</span><input
-                name="myrating" type="radio" value="1" /><span>☆</span>
+    <div id="menu">
+        <div id="menu_container">
+            <a href="#pr">Profile</a>
+            <a href="#ei">Edit Profile</a>
+            <a href="#rf">Make Diagnosis</a>
+            <a href="#rh">Diagnosis History</a>
         </div>
     </div>
 
+    <div id="body">
+        <div class="article">
+            <div class="rate_title">
+                <h2>Please leave a comment about this session:</h2>
+            </div>
+            <form>
+                <textarea placeholder="Enter your comment here"></textarea>
+            </form>
+
+            <div class="rate_title">
+                <h2>Please rate your experience with Patient Zero!</h2>
+            </div>
+            <div class="star">
+                <legend>Score:</legend>
+
+                <input type="radio" id="star5" name="score" value="5" />
+                <label title="5 stars" for="star5">5 stars</label>
+
+                <input type="radio" id="star4" name="score" value="4" />
+                <label title="4 stars" for="star4">4 stars</label>
+
+                <input type="radio" id="star3" name="score" value="3" />
+                <label title="3 stars" for="star3">3 stars</label>
+
+                <input type="radio" id="star2" name="score" value="2" />
+                <label title="2 stars" for="star2">2 stars</label>
+
+                <input type="radio" id="star1" name="score" value="1" />
+                <label title="1 star" for="star1">1 stars</label>
+
+            </div>
+            <div class="form_button" style="text-align:center">
+                <input class="medium_blue_r_button" type="submit" value="Submit" />
+            </div>
+        </div>
+    </div>
     <div id="footer">
         <div id="footer_left">
             &copy; WebMD LLC. All rights reserved 2018.

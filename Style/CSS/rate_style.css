@@ -36,6 +36,7 @@ textarea {
     -ms-transform: translateX(-50%);
     /* For IE9 */
     width: 500px;
+    height: 300px;
     box-sizing: border-box;
     border: 2px solid #DDDDDD;
     border-radius: 4px;
@@ -109,7 +110,7 @@ textarea:focus {
 .star label:hover~label:before,
 .star input:checked~label:before {
     content: "\2605";
-    color: #049bff;
+    color: DarkTurquoise;
 }
 
 .star label:active {
