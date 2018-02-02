@@ -1,9 +1,10 @@
 <html>
   <head>
-    <title>Patient Profile Page</title>
+    <title>WebMD - Patient Profile Page</title>
     <link rel="stylesheet" href="../Style/CSS/info_styles.css">
     <link rel="stylesheet" href="../Style/CSS/styles.css">
     <link rel="stylesheet" href="../Style/CSS/forms_styles.css">
+    <link rel="stylesheet" href="../Style/CSS/calendar_styles.css">
   </head>
   <body>
     <div id="header">
@@ -18,15 +19,16 @@
 
     <div id="menu">
       <div id="menu_container">
-        <a>Profile</a>
-        <a>Edit Profile</a>
-        <a>Make Request</a>
-        <a>Request Status</a>
-        <a>History</a>
+        <a href="#pr">Profile</a>
+        <a href="#ei">Edit Profile</a>
+        <a href="#rf">Make Request</a>
+        <a href="#rh">Request History</a>
       </div>
     </div>
 
     <div id="body">
+
+      <a name="pr"></a>
       <div class="article">
         <div class="article_title">
           <h3>Profile information</h3>
@@ -43,6 +45,11 @@
                 <td>01/01/1994</td>
             </tr>
 
+            <tr>
+              <th>Email</th>
+              <td>bennyben@email.com</td>
+            </tr>
+
             <tr class="last_tr">
               <th>Gender</th>
               <td>Male</td>
@@ -53,6 +60,7 @@
           </div>
         </div>
 
+        <a name="ei"></a>
         <div class="article">
           <div class="article_title">
             <h3>Edit Information</h3>
@@ -97,8 +105,125 @@
           </div>
       </div>
 
+      <a name="rf"></a>
       <div class="article">
+        <div class="article_title">
+          <h3>Request Form</h3>
+        </div>
+        <div class="info_container container_spread roboto">
+          <div class="form blue_inputs blue_dropbox roboto">
+            <form>
+              Which doctor would you like to see? <br />
+              <select name="doctor_names">
+                <option>Any</option>
+                <option>Mark Young</option>
+                <option>John Selvester</option>
+                <option>Monica Guntaler</option>
+              </select> <br /><br/>
+
+              Describe your symptoms and what might be aching : <br />
+              <textarea rows="10"></textarea> <br /><br />
+
+              Choose the day that works for you : <br />
+              <div class="calendar">
+                <div class="month">
+                  <ul>
+                    <li class="prev">&#10094;</li>
+                    <li class="next">&#10095;</li>
+                    <li>
+                      August<br>
+                      <span style="font-size:18px">2017</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <ul class="weekdays">
+                  <li>Mo</li>
+                  <li>Tu</li>
+                  <li>We</li>
+                  <li>Th</li>
+                  <li>Fr</li>
+                  <li>Sa</li>
+                  <li>Su</li>
+                </ul>
+
+                <ul class="days">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li><span class="active">10</span></li>
+                  <li>11</li>
+                  <li>12</li>
+                  <li>13</li>
+                  <li>14</li>
+                  <li>15</li>
+                  <li>16</li>
+                  <li>17</li>
+                  <li>18</li>
+                  <li>19</li>
+                  <li>20</li>
+                  <li>21</li>
+                  <li>22</li>
+                  <li>23</li>
+                  <li>24</li>
+                  <li>25</li>
+                  <li>26</li>
+                  <li>27</li>
+                  <li>28</li>
+                  <li>29</li>
+                  <li>30</li>
+                  <li>31</li>
+                </ul>
+              </div>
+
+            </form>
+          </div>
+        </div>
       </div>
+
+      <a name="rh"></a>
+      <div class="article">
+        <div class="article_title">
+          <h3>Request History</h3>
+        </div>
+        <div class="info_container roboto">
+          <table>
+            <tr>
+              <td>#</td>
+              <th>Date</th>
+              <th>Doctor</th>
+              <th>Status</th>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>12/05/2017</td>
+              <td>Mark Young</td>
+              <td>&#9744 Pending</td>
+            </tr>
+
+            <tr>
+              <th>2</th>
+              <td>06/15/2017</td>
+              <td>John Selvester</td>
+              <td>&#9745 Approved</td>
+            </tr>
+
+            <tr>
+              <th>1</th>
+              <td>10/29/2016</td>
+              <td>Monica Guntaler</td>
+              <td>&#9746 Rejected</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
     </div>
 
 
