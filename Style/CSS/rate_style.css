@@ -1,0 +1,122 @@
+.rate_title {
+    position: center;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.r_form {
+    display: inline-block;
+    margin-left: 55%;
+    /* From parent width */
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    /* For IE9 */
+    width: 460px;
+    box-sizing: border-box;
+}
+
+.rate_inputs input[type="textarea"] {
+    width: 80%;
+    padding: 3px 0px;
+    padding-left: 5px;
+    margin: 3px 0px 10px 0px;
+    font-size: 15px;
+    color: GoldenRod;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    outline: none;
+    border: 2px solid #DDDDDD;
+}
+
+textarea {
+    display: inline-block;
+    margin-left: 50%;
+    /* From parent width */
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    /* For IE9 */
+    width: 500px;
+    box-sizing: border-box;
+    border: 2px solid #DDDDDD;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-family: 'Merriweather', serif;
+    resize: none;
+}
+
+textarea:focus {
+    width: 500px;
+    height: 300px;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 2px solid rgba(81, 203, 238, 1);
+}
+
+#input_comment {
+    padding: 4px 5px 6px 5px;
+    width: 500px;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+.star input {
+    position: absolute;
+    top: -2em;
+    clip: rect(0, 0, 0, 0);
+}
+
+.star {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    border: 0;
+    font-size: 0;
+}
+
+.star legend {
+    overflow: hidden;
+    height: 0;
+}
+
+.star label {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 32px;
+    line-height: 2rem;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 1.2em;
+    height: 1em;
+    overflow: hidden;
+    text-indent: 100%;
+}
+
+.star label:before {
+    content: "\2605";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-indent: 0;
+    line-height: 1em;
+    color: rgb(206, 206, 206);
+}
+
+.star label:hover:before,
+.star label:hover~label:before,
+.star input:checked~label:before {
+    content: "\2605";
+    color: #049bff;
+}
+
+.star label:active {
+    position: relative;
+    top: 1px;
+}
+
+body {
+    width: 80%;
+}
