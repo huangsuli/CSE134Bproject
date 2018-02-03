@@ -1,0 +1,100 @@
+.form {
+    width: 400px;
+}
+
+.blue_inputs input[type="text"] {
+  width: 80%;
+  padding: 3px 0px;
+  padding-left: 5px;
+  margin: 3px 0px 10px 0px;
+
+  font-size: 15px;
+  color: DarkOrange;
+  font-weight: bold;
+  font-family: 'Merriweather', serif;
+
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 2px solid #DDDDDD;
+
+}
+
+.blue_inputs input[type="text"]:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+
+  border: 2px solid rgba(81, 203, 238, 1);
+}
+
+.blue_dropbox select {
+  color: DarkOrange;
+  background-color: white;
+  padding: 5px 5px;
+  border: 2px solid #DDDDDD;
+  font-family: 'Merriweather', serif;
+  font-weight: bold;
+
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+  outline: none;
+}
+
+.blue_dropbox select:focus {
+  background-color: white;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border: 2px solid rgba(81, 203, 238, 1);
+}
+
+#input_year {
+  padding: 4px 5px 6px 5px;
+  width: 60px;
+}
+
+#input_city {
+  padding: 4px 5px 6px 5px;
+  width: 150px;
+}
+
+.medium_blue_r_button {
+  padding: 10px 15px;
+
+  border: 2px solid #008CBA;
+  outline: none;
+
+  background-color: white;
+  font-family: 'Merriweather', serif;
+  font-size: 15px;
+  margin: 15px 0px 10px 20px;
+  font-weight: bold;
+  color: #008CBA;
+
+  -webkit-transition: color 0.5s ease;
+
+  -moz-transition: color 0.5s ease;
+
+  transition: color 0.5s ease;
+}
+
+.medium_blue_r_button:hover {
+  color: white;
+  box-shadow: inset 230px 0 0 0 LightSkyBlue;
+}
+
+.medium_blue_r_button:active {
+  color: white;
+  box-shadow: inset 230px 0 0 0 LightSkyBlue;
+  border: inset 2px #008CBA;
+}
+
+.table_button {
+  margin: 0px;
+  padding: 0px;
+  width: 70px;
+  height: 30px;
+}
+
+.button_left_marg {
+  margin-left: 5px;
+}
