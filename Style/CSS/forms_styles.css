@@ -53,6 +53,11 @@
     width: 60px;
 }
 
+#input_city {
+  padding: 4px 5px 6px 5px;
+  width: 150px;
+}
+
 .medium_blue_r_button {
     padding: 10px 15px;
     border: 2px solid #008CBA;
@@ -77,6 +82,12 @@
     color: white;
     box-shadow: inset 230px 0 0 0 LightSkyBlue;
     border: inset 2px #008CBA;
+}
+
+.table_button {
+  margin: 0px;
+  width: 80px;
+  height: 40px;
 }
 
 .button_left_marg {

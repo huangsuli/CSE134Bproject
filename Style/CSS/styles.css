@@ -205,3 +205,12 @@ body {
 .merri {
     font-family: 'Merriweather', serif;
 }
+
+.article_title_center {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+::placeholder {
+    color: DarkOrange;
+}
