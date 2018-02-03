@@ -4,7 +4,6 @@
 }
 
 .about_title {
-    position: center;
     text-align: center;
     font-size: 30px;
     font-family: 'Merriweather', serif;
@@ -32,7 +31,7 @@
 .card_name {
     font-family: 'Merriweather', sans-serif;
     width: 90%;
-    margin: 10 auto;
+    margin: 10px auto;
 }
 
 .card p {
@@ -41,7 +40,7 @@
 }
 
 .container {
-    padding: 0 10px;
+    padding: 0px 10px;
 }
 
 .container::after,
