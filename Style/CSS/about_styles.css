@@ -4,9 +4,15 @@
     box-sizing: inherit;
 }
 
+.about_pic {
+    width: 99%;
+    border: 2px groove grey;
+}
+
 .about_title {
     position: center;
     text-align: center;
+    font-size: 30px;
     font-family: 'Merriweather', serif;
 }
 
@@ -25,7 +31,19 @@
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+    box-shadow: 10px 0 8px -8px black, -10px 0 8px -8px black;
+}
+
+.card_name {
+    font-family: 'Merriweather', sans-serif;
+    width: 90%;
+    margin: 10 auto;
+}
+
+.card p {
+    padding: 5px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -39,22 +57,9 @@
     display: table;
 }
 
-.title {
+.article_desc {
+    width: 90%;
+    margin: -15px 0px 5px 10px;
+    font-size: 20px;
     color: grey;
-}
-
-.button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-}
-
-.button:hover {
-    background-color: #555;
 }
