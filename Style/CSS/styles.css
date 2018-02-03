@@ -51,6 +51,42 @@ body {
   margin-top: 3px;
 }
 
+#menu {
+  width: 100%;
+  padding: 10px 0px 25px 0px;
+  border-bottom: 1px black solid;
+  box-shadow: 0 5px 8px -6px black;
+  text-align: center;
+}
+
+#menu_container {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+#menu_container a {
+  text-decoration: none;
+
+  display: inline-block;
+  text-align: center;
+
+  padding: 10px 15px 3px 15px;;
+  box-shadow: 0 6px 8px -6px black;
+
+  font-family: 'Merriweather', serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: DarkTurquoise;
+  opacity: 0.8;
+
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#menu_container a:hover {
+  box-shadow: 0 6px 8px -6px Orange;
+}
+
 #title {
   float: left;
   margin-top: 18px;
@@ -71,11 +107,6 @@ body {
 
 .article_title {
   margin-left: 10px;
-  font-family: 'Merriweather', serif;
-}
-
-.article_title_center{
-  text-align: center; 
   font-family: 'Merriweather', serif;
 }
 
@@ -102,7 +133,6 @@ body {
 .left_floater {
   float:left;
 }
-
 .big_blue_button a {
   display: inline-block;
   text-align: center;
@@ -122,11 +152,11 @@ body {
   color: #008CBA;
 
   cursor: pointer;
-  -webkit-transition: all 0.5s ease;
+  -webkit-transition: color 0.5s ease;
 
-  -moz-transition: all 0.5s ease;
+  -moz-transition: color 0.5s ease;
 
-  transition: all 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 .big_blue_button a:hover {
@@ -184,6 +214,11 @@ body {
 }
 
 .merri {
+  font-family: 'Merriweather', serif;
+}
+
+.article_title_center{
+  text-align: center; 
   font-family: 'Merriweather', serif;
 }
 
