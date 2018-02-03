@@ -1,0 +1,107 @@
+.rate_title {
+    position: center;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.r_form {
+    display: inline-block;
+    margin-left: 55%;
+    /* From parent width */
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    /* For IE9 */
+    width: 460px;
+    box-sizing: border-box;
+}
+
+.big_blue_textarea {
+    width: 500px !important;
+    height: 300px;
+    font-size: 16px;
+    color: DarkOrange;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
+}
+
+.textarea_center {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#comment_box {
+    margin-left: 40%;
+}
+
+#input_comment {
+    padding: 4px 5px 6px 5px;
+    width: 500px;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+.star input {
+    position: absolute;
+    top: -2em;
+    clip: rect(0, 0, 0, 0);
+}
+
+.star {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    border: 0;
+    font-size: 0;
+}
+
+.star legend {
+    overflow: hidden;
+    height: 0;
+}
+
+.star label {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 32px;
+    line-height: 2rem;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 1.2em;
+    height: 1em;
+    overflow: hidden;
+    text-indent: 100%;
+}
+
+.star label:before {
+    content: "\2605";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-indent: 0;
+    line-height: 1em;
+    color: rgb(206, 206, 206);
+}
+
+.star label:hover:before,
+.star label:hover~label:before,
+.star input:checked~label:before {
+    content: "\2605";
+    color: DarkTurquoise;
+}
+
+.star label:active {
+    position: relative;
+    top: 1px;
+}
+
+.radio_h2 {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.textarea_unsize textarea{
+  resize: none;
+}
