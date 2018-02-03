@@ -1,46 +1,49 @@
-<html>
-<head>
-<title>Chat</title>
-<link type="text/css" rel="stylesheet" href="../Style/CSS/styles.css" />
-<link type="text/css" rel="stylesheet" href="../Style/CSS/chat_styles.css" />
-
-</head>
-<body id="chat_body">
-     <div id="header">
-      <div id="title_block">
-        <img id="doc_pic" src="../Style/Pictures/male_doctor.png" />
-        <h1 id="title"> WebMD </h1>
-      </div>
-      <div id="header_login">
-        <a href="index.html"> log out </a>
-      </div>
-    </div> <br/>
-
-    <h2 class="article_title_center">Chat Room</h2>
-
-    <div id="wrapper">
-        <div id="chat_menu">
-          <p class="welcome roboto">Welcome, user <b></b></p>
-          <p class="logout roboto"><a id="exit" href="#">Exit Chat</a></p>
-          <div style="clear:both"></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WebMD - Chat</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="../Style/CSS/styles.css" />
+    <link type="text/css" rel="stylesheet" href="../Style/CSS/chat_styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+  </head>
+  <body id="chat_body">
+       <div id="header">
+        <div id="title_block">
+          <img alt="" id="doc_pic" src="../Style/Pictures/male_doctor.png" />
+          <h1 id="title"> WebMD </h1>
         </div>
-     
-        <div id="chatbox"></div>
-     
-            <form name="message" action="" id="input_form">
-                <input name="usermsg" type="text" id="usermsg" size="63" aline="middle"/>
-                <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
-            </form>
-    </div>
-    <br/>
- <div id="footer">
-      <div id="footer_left">
-        &copy; WebMD LLC. All rights reserved 2018.
+        <div id="header_login">
+          <a href="index.html"> log out </a>
+        </div>
+      </div> <br/>
+
+      <h2 class="article_title_center">Chat Room</h2>
+
+      <div id="wrapper">
+          <div id="chat_menu">
+            <p class="welcome roboto">Welcome, user <b></b></p>
+            <p class="logout roboto"><a id="exit" href="#">Exit Chat</a></p>
+            <div style="clear:both"></div>
+          </div>
+
+          <div id="chatbox"></div>
+
+              <form name="message" action="index.html" id="input_form">
+                  <input name="usermsg" type="text" id="usermsg" size="63"/>
+                  <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+              </form>
       </div>
-      <div id="footer_right">
-        <a href="index.html">About us</a>
-        <a href="index.html">Contact us</a>
+      <br/>
+   <div id="footer">
+        <div id="footer_left">
+          &copy; WebMD LLC. All rights reserved 2018.
+        </div>
+        <div id="footer_right">
+          <a href="about.html">About us</a>
+          <a href="contact.html">Contact us</a>
+        </div>
       </div>
-    </div>
-</body>
+  </body>
 </html>

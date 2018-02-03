@@ -1,15 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>WebMD - Patient Profile Page</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="../Style/CSS/info_styles.css">
     <link rel="stylesheet" href="../Style/CSS/styles.css">
     <link rel="stylesheet" href="../Style/CSS/forms_styles.css">
     <link rel="stylesheet" href="../Style/CSS/calendar_styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
   </head>
   <body>
     <div id="header">
       <div id="title_block">
-        <a href="index.html"><img id="doc_pic" src="../Style/Pictures/male_doctor.png" /></a>
+        <a href="index.html"><img alt="" id="doc_pic" src="../Style/Pictures/male_doctor.png" /></a>
         <h1 id="title"> WebMD </h1>
       </div>
       <div id="header_login">
@@ -29,7 +33,7 @@
 
     <div id="body">
 
-      <a name="pr"></a>
+      <a id="pr"></a>
       <div class="article">
         <div class="article_title">
           <h3>Doctor Profile information</h3>
@@ -76,7 +80,7 @@
           </div>
         </div>
 
-        <a name="ei"></a>
+        <a id="ei"></a>
         <div class="article">
           <div class="article_title">
             <h3>Edit Information</h3>
@@ -91,7 +95,7 @@
 
               Location : <br />
               <input id="input_city" type="text" name="location" placeholder="City">
-              <select name="states" value="states">
+              <select name="states">
                 <option value="" selected disabled hidden>States</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -178,7 +182,7 @@
           </div>
       </div>
 
-      <a name="rf"></a>
+      <a id="rf"></a>
       <div class="article">
         <div class="article_title">
           <h3>Pending Requests</h3>
@@ -215,7 +219,7 @@
         </div>
       </div>
 
-      <a name="fe"></a>
+      <a id="fe"></a>
       <div class="article">
         <div class="article_title">
           <h3>Accepted Requests</h3>
@@ -251,7 +255,7 @@
           </table>
         </div>
       </div>
-      <a name="rh"></a>
+      <a id="rh"></a>
       <div class="article">
         <div class="article_title">
           <h3>Request History</h3>
@@ -269,7 +273,7 @@
               <th>3</th>
               <td>12/05/2017</td>
               <td>Mark Young</td>
-              <td>&#9745 Completed</td>
+              <td>&#9745; Completed</td>
               <td><button class="medium_blue_r_button table_button" >Manage</button></td>
             </tr>
 
@@ -277,7 +281,7 @@
               <th>2</th>
               <td>06/15/2017</td>
               <td>John Selvester</td>
-              <td>&#9745 Completed</td>
+              <td>&#9745; Completed</td>
               <td><button class="medium_blue_r_button table_button" >Manage</button></td>
             </tr>
 
@@ -285,7 +289,7 @@
               <th>1</th>
               <td>10/29/2016</td>
               <td>Monica Guntaler</td>
-              <td>&#9746 Rejected</td>
+              <td>&#9746; Rejected</td>
               <td><button class="medium_blue_r_button table_button" >Manage</button></td>
             </tr>
           </table>
