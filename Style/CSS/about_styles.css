@@ -1,9 +1,3 @@
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
 .about_pic {
     width: 99%;
     border: 2px groove grey;

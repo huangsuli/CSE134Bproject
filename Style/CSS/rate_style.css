@@ -15,28 +15,18 @@
     box-sizing: border-box;
 }
 
-textarea {
-    display: inline-block;
-    margin-left: 50%;
-    /* From parent width */
-    transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    /* For IE9 */
-    width: 500px;
+.big_blue_textarea {
+    width: 500px !important;
     height: 300px;
-    box-sizing: border-box;
-    border: 2px solid #DDDDDD;
-    border-radius: 4px;
-    background-color: #f8f8f8;
     font-size: 16px;
-    color: rgb(0, 0, 0);
-    font-family: 'Merriweather', serif;
+    color: DarkOrange;
+    font-family: 'Roboto', sans-serif;
     resize: none;
 }
 
-textarea:focus {
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    border: 2px solid rgba(81, 203, 238, 1);
+.textarea_center {
+  width: 500px;
+  margin: 0 auto;
 }
 
 #comment_box {
@@ -107,13 +97,11 @@ textarea:focus {
     top: 1px;
 }
 
-#marginfix {
-    font-size: 18px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    -ms-transform: translateX(-50%)
+.radio_h2 {
+  font-weight: normal;
+  font-size: 20px;
 }
 
-body {
-    width: 80%;
+.textarea_unsize textarea{
+  resize: none;
 }
