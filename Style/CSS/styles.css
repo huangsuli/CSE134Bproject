@@ -212,3 +212,10 @@ body {
 ::placeholder {
     color: DarkOrange;
 }
+
+.error_span {
+    font-size: 10px;
+    color: red;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
