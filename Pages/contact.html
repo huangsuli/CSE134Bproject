@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <title>Contact Us</title>
-      <meta charset="utf-8">
-      <link rel="stylesheet" href="../Style/CSS/styles.css">
-      <link rel="stylesheet" type="text/css" href="../Style/CSS/forms_styles.css">
-      <link rel="stylesheet" type="text/css" href="../Style/CSS/rate_style.css">
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-  </head>
 
-  <body>
-      <div id="header">
-          <div id="title_block">
-              <a href="index.html"><img alt="" id="doc_pic" src="../Style/Pictures/male_doctor.png" /></a>
-              <h1 id="title"> WebMD </h1>
-          </div>
-          <div id="header_login">
-              <a href="login.html"> Log In </a>
-          </div>
-      </div>
+<head>
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../Style/CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="../Style/CSS/forms_styles.css">
+    <link rel="stylesheet" type="text/css" href="../Style/CSS/rate_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <div id="title_block">
+            <a href="index.html"><img alt="" id="doc_pic" src="../Style/Pictures/male_doctor.png" /></a>
+            <h1 id="title"> WebMD </h1>
+        </div>
+        <div id="header_login">
+            <a href="login.html"> Log In </a>
+        </div>
+    </div>
 
 
-      <div id="body">
-          <div class="article">
-              <div class="article_title">
-                  <h1>Need to reach us?</h1>
-              </div>
-              <p>Please leave your contact information and comments below. We are happy to hear from you.</p>
-          </div>
+    <div id="body">
+        <div class="article">
+            <div class="article_title">
+                <h1>Need to reach us?</h1>
+            </div>
+            <p>Please leave your contact information and comments below. We are happy to hear from you.</p>
+        </div>
 
-          <div class="article">
-              <div class="form blue_inputs blue_dropbox roboto">
-                  First Name :<br />
-                  <input type="text" name="name_first" />
-                  <br /> Last Name : <br />
-                  <input type="text" name="name_last" />
-                  <br /> Email Address :<br />
-                  <input type="text" name="email" />
-                  <br /> Phone Number :<br />
-                  <input type="text" name="phone" />
-                  <br /> Comments: <br />
+        <div class="article">
+            <form id="contactForm">
+                <div class="form blue_inputs blue_dropbox roboto">
+                    First Name :<br />
+                    <span class="error_span" id="err1"></span>
+                    <input type="text" name="name_first" />
 
-                  <div class="blue_inputs textarea_unsize">
-                    <textarea rows="10"></textarea>
-                  </div>
-                  <div class="form_button">
-                      <input class="medium_blue_r_button" type="submit" value="Submit" />
-                  </div>
+                    <br /> Last Name : <br />
+                    <span class="error_span" id="err2"></span>
+                    <input type="text" name="name_last" />
 
-              </div>
-          </div>
+                    <br /> Email Address :<br />
+                    <span class="error_span" id="err3"></span>
+                    <input type="text" name="email" />
 
-      </div>
+                    <br /> Phone Number :<br />
+                    <span class="error_span" id="err4"></span>
+                    <input type="text" name="phone" />
+                    <br /> Comments: <br />
 
-      <div id="footer">
-          <div id="footer_left">
-              &copy; WebMD LLC. All rights reserved 2018.
-          </div>
-          <div id="footer_right">
-              <a href="about.html">About us</a>
-              <a href="contact.html">Contact us</a>
-          </div>
-      </div>
+                    <div class="blue_inputs textarea_unsize">
+                        <textarea rows="10"></textarea>
+                    </div>
+                    <div class="form_button">
+                        <input class="medium_blue_r_button" type="submit" value="Submit" />
+                    </div>
 
-  </body>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div id="footer_left">
+            &copy; WebMD LLC. All rights reserved 2018.
+        </div>
+        <div id="footer_right">
+            <a href="about.html">About us</a>
+            <a href="contact.html">Contact us</a>
+        </div>
+    </div>
+    <script src="../Style/Scripts/contact_val.js"></script>
+</body>
+
 </html>

@@ -1,104 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <title>Rating Patient Interaction</title>
-      <meta charset="utf-8">
-      <link rel="stylesheet" type="text/css" href="../Style/CSS/rate_style.css">
-      <link rel="stylesheet" type="text/css" href="../Style/CSS/styles.css">
-      <link rel="stylesheet" type="text/css" href="../Style/CSS/forms_styles.css">
-      <link rel="stylesheet" type="text/css" href="../Style/CSS/info_styles.css">
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-  </head>
 
-  <body>
-      <div id="header">
-          <div id="title_block">
-              <a href="index.html"><img alt="" id="doc_pic" src="../Style/Pictures/male_doctor.png" /></a>
-              <h1 id="title"> WebMD </h1>
-          </div>
-          <div id="header_login">
-              <a href="index.html"> Log Out </a>
-          </div>
-      </div>
+<head>
+    <title>Rating Patient Interaction</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../Style/CSS/rate_style.css">
+    <link rel="stylesheet" type="text/css" href="../Style/CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="../Style/CSS/forms_styles.css">
+    <link rel="stylesheet" type="text/css" href="../Style/CSS/info_styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+</head>
 
-      <div id="menu">
-          <div id="menu_container">
-              <a href="docProf.html#pr">Profile</a>
-              <a href="docProf.html#ei">Edit Profile</a>
-              <a href="docProf.html#rf">Pending Requests</a>
-              <a href="docProf.html#fe">Accepted Requests</a>
-              <a href="docProf.html#rh">Request History</a>
-          </div>
-      </div>
+<body>
+    <div id="header">
+        <div id="title_block">
+            <a href="index.html"><img alt="" id="doc_pic" src="../Style/Pictures/male_doctor.png" /></a>
+            <h1 id="title"> WebMD </h1>
+        </div>
+        <div id="header_login">
+            <a href="index.html"> Log Out </a>
+        </div>
+    </div>
 
-      <div id="body">
-          <div class="article">
-              <form>
-                  <div class="rate_title">
-                      <h2>Patient's diagnosis:</h2>
-                  </div>
+    <div id="menu">
+        <div id="menu_container">
+            <a href="docProf.html#pr">Profile</a>
+            <a href="docProf.html#ei">Edit Profile</a>
+            <a href="docProf.html#rf">Pending Requests</a>
+            <a href="docProf.html#fe">Accepted Requests</a>
+            <a href="docProf.html#rh">Request History</a>
+        </div>
+    </div>
 
-                  <div class="blue_inputs"><div class="textarea_center">
-                    <textarea class="big_blue_textarea" placeholder="What have you diagnosed?"></textarea>
-                  </div></div>
+    <div id="body">
+        <div class="article">
+            <form id="docForm">
+                <div class="rate_title">
+                    <h2>Patient's diagnosis:</h2>
+                </div>
+                <div class="center">
+                    <span class="error_span" id="err1"></span>
+                </div>
+                <div class="blue_inputs">
+                    <div class="textarea_center">
+                        <textarea class="big_blue_textarea" id="docDiag" placeholder="What have you diagnosed?"></textarea>
+                    </div>
+                </div>
 
-                  <div class="rate_title">
-                      <h2>Please leave a comment about this session:</h2>
-                  </div>
-
-                  <div class="blue_inputs"><div class="textarea_center">
-                    <textarea class="big_blue_textarea" placeholder="How was the session?"></textarea>
-                  </div></div>
-                  <div class="rate_title">
+                <div class="rate_title">
+                    <h2>Please leave a comment about this session:</h2>
+                </div>
+                <div class="center">
+                    <span class="error_span" id="err2"></span>
+                </div>
+                <div class="blue_inputs">
+                    <div class="textarea_center">
+                        <textarea class="big_blue_textarea" id="docComm" placeholder="How was the session?"></textarea>
+                    </div>
+                </div>
+                <div class="rate_title">
                     <h2>
-                      Should the patient carry out an in-person visit? <br />
-                      <span class="radio_h2">
+                        Should the patient carry out an in-person visit? <br />
+                        <div class="center">
+                            <span class="error_span" id="err3"></span>
+                        </div>
+                        <span class="radio_h2">
                         <input type="radio" name="visit" value="yes" /> Yes
-                        <input type="radio" name="visit" value="no" checked /> No
+                        <input type="radio" name="visit" value="no" /> No
                       </span>
                     </h2>
-                  </div>
-                  <br />
-                  <div class="rate_title">
-                      <h2>Please rate your experience with Patient Zero!</h2>
-                  </div>
+                </div>
+                <br />
+                <div class="rate_title">
+                    <h2>Please rate your experience with Patient Zero!</h2>
+                </div>
+                <div class="center">
+                    <span class="error_span" id="err4"></span>
+                </div>
+                <div class="star">
+                    Score:
 
-                  <div class="star">
-                      Score:
+                    <input type="radio" id="star5" name="score" value="5" />
+                    <label title="5 stars" for="star5">5 stars</label>
 
-                      <input type="radio" id="star5" name="score" value="5" />
-                      <label title="5 stars" for="star5">5 stars</label>
+                    <input type="radio" id="star4" name="score" value="4" />
+                    <label title="4 stars" for="star4">4 stars</label>
 
-                      <input type="radio" id="star4" name="score" value="4" />
-                      <label title="4 stars" for="star4">4 stars</label>
+                    <input type="radio" id="star3" name="score" value="3" />
+                    <label title="3 stars" for="star3">3 stars</label>
 
-                      <input type="radio" id="star3" name="score" value="3" />
-                      <label title="3 stars" for="star3">3 stars</label>
+                    <input type="radio" id="star2" name="score" value="2" />
+                    <label title="2 stars" for="star2">2 stars</label>
 
-                      <input type="radio" id="star2" name="score" value="2" />
-                      <label title="2 stars" for="star2">2 stars</label>
+                    <input type="radio" id="star1" name="score" value="1" />
+                    <label title="1 star" for="star1">1 stars</label>
 
-                      <input type="radio" id="star1" name="score" value="1" />
-                      <label title="1 star" for="star1">1 stars</label>
+                </div>
+                <div class="form_button" style="text-align:center">
+                    <input class="medium_blue_r_button" type="submit" value="Submit" />
+                </div>
+            </form>
+        </div>
+    </div>
 
-                  </div>
-                  <div class="form_button" style="text-align:center">
-                      <input class="medium_blue_r_button" type="submit" value="Submit" />
-                  </div>
-              </form>
-          </div>
-      </div>
-
-      <div id="footer">
-          <div id="footer_left">
-              &copy; WebMD LLC. All rights reserved 2018.
-          </div>
-          <div id="footer_right">
-              <a href="about.html">About us</a>
-              <a href="contact.html">Contact us</a>
-          </div>
-      </div>
-  </body>
+    <div id="footer">
+        <div id="footer_left">
+            &copy; WebMD LLC. All rights reserved 2018.
+        </div>
+        <div id="footer_right">
+            <a href="about.html">About us</a>
+            <a href="contact.html">Contact us</a>
+        </div>
+    </div>
+    <script src="../Style/Scripts/doc_rate_val.js"></script>
+</body>
 
 </html>

@@ -23,8 +23,8 @@
 }
 
 .textarea_center {
-  width: 500px;
-  margin: 0 auto;
+    width: 500px;
+    margin: 0 auto;
 }
 
 #comment_box {
@@ -96,10 +96,14 @@
 }
 
 .radio_h2 {
-  font-weight: normal;
-  font-size: 20px;
+    font-weight: normal;
+    font-size: 20px;
 }
 
-.textarea_unsize textarea{
-  resize: none;
+.textarea_unsize textarea {
+    resize: none;
+}
+
+.center {
+    text-align: center;
 }

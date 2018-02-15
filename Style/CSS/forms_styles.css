@@ -102,10 +102,14 @@
 }
 
 input[type="date"] {
-    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+    background: #fff url('../Pictures/cal_icon.png') 97% 50% no-repeat;
 }
 
-[type="date"]::-webkit-inner-spin-button {
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-clear-button {
     display: none;
 }
 

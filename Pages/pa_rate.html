@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Rating Doctor Interaction</title>
     <meta charset="utf-8">
@@ -32,18 +33,24 @@
 
     <div id="body">
         <div class="article">
-            <form>
+            <form id="paForm">
                 <div class="rate_title">
                     <h2>Please leave a comment about this session:</h2>
                 </div>
-
-                <div class="blue_inputs"><div class="textarea_center">
-                  <textarea class="big_blue_textarea" placeholder="Enter your comment here"></textarea>
+                <div class="center">
+                    <span class="error_span" id="err1"></span>
                 </div>
+                <div class="blue_inputs">
+                    <div class="textarea_center">
+                        <textarea class="big_blue_textarea" id="paComm" placeholder="Enter your comment here"></textarea>
+                    </div>
                 </div>
 
                 <div class="rate_title">
                     <h2>Please rate your experience with Dr. Pepper!</h2>
+                </div>
+                <div class="center">
+                    <span class="error_span" id="err2"></span>
                 </div>
                 <div class="star">
                     Score:
@@ -79,6 +86,7 @@
             <a href="contact.html">Contact us</a>
         </div>
     </div>
+    <script src="../Style/Scripts/pat_rate_val.js"></script>
 </body>
 
 </html>
