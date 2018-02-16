@@ -36,23 +36,24 @@
                 <div class="form blue_inputs blue_dropbox roboto">
                     First Name :<br />
                     <span class="error_span" id="err1"></span>
-                    <input type="text" name="name_first" />
+                    <input type="text" id="name_first" name="name_first" />
 
                     <br /> Last Name : <br />
                     <span class="error_span" id="err2"></span>
-                    <input type="text" name="name_last" />
+                    <input type="text" id="name_last" name="name_last" />
 
                     <br /> Email Address :<br />
                     <span class="error_span" id="err3"></span>
-                    <input type="text" name="email" />
+                    <input type="text" id="email" name="email" />
 
                     <br /> Phone Number :<br />
                     <span class="error_span" id="err4"></span>
-                    <input type="text" name="phone" />
-                    <br /> Comments: <br />
+                    <input type="text" id="phone" name="phone" />
 
+                    <br /> Comments: <br />
+                    <span class="error_span" id="err5"></span>
                     <div class="blue_inputs textarea_unsize">
-                        <textarea rows="10"></textarea>
+                        <textarea id="conComm" rows="10"></textarea>
                     </div>
                     <div class="form_button">
                         <input class="medium_blue_r_button" type="submit" value="Submit" />
@@ -73,7 +74,8 @@
             <a href="contact.html">Contact us</a>
         </div>
     </div>
-    <script src="../Style/Scripts/contact_val.js"></script>
+
 </body>
+<script src="../Style/Scripts/contact_val.js"></script>
 
 </html>

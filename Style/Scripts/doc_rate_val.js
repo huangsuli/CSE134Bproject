@@ -12,11 +12,15 @@ function validation() {
     if (!document.getElementById('docDiag').value) {
         errors = true;
         document.getElementById('err1').innerHTML = "ERROR -- Please make a diagnosis";
+    } else {
+        document.getElementById('err1').innerHTML = "";
     }
 
     if (!document.getElementById('docComm').value) {
         errors = true;
-        document.getElementById('err2').innerHTML = "ERROR -- Please leave a comment about your patient";
+        document.getElementById('err2').innerHTML = "ERROR -- Please leave a comment about your session";
+    } else {
+        document.getElementById('err2').innerHTML = "";
     }
 
     //check for radio inputs
@@ -43,11 +47,15 @@ function validation() {
     if (!recChecked) {
         errors = true;
         document.getElementById('err3').innerHTML = "ERROR -- Please decide whether an in-person visit is necessary";
+    } else {
+        document.getElementById('err3').innerHTML = "";
     }
 
     if (!starChecked) {
         errors = true;
         document.getElementById('err4').innerHTML = "ERROR -- Please leave a rating";
+    } else {
+        document.getElementById('err4').innerHTML = "";
     }
 
 

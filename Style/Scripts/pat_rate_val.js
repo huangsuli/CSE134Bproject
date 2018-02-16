@@ -11,7 +11,9 @@ function validation() {
     // If comment is empty
     if (!document.getElementById('paComm').value) {
         errors = true;
-        document.getElementById('err1').innerHTML = "ERROR -- Please leave a comment about your doctor";
+        document.getElementById('err1').innerHTML = "ERROR -- Please leave a comment about your session";
+    } else {
+        document.getElementById('err1').innerHTML = "";
     }
 
     //check if a star has been selected
@@ -29,6 +31,8 @@ function validation() {
     if (!isChecked) {
         errors = true;
         document.getElementById('err2').innerHTML = "ERROR -- Please leave a rating";
+    } else {
+        document.getElementById('err2').innerHTML = "";
     }
 
     // If there are errors
