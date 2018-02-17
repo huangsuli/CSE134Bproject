@@ -214,10 +214,6 @@ function updateUserInfo() {
   alert("Your information has been updated!");
 }
 
-function verifyEditFields() {
-  return true;
-}
-
 
 function updateInfo() {
   doc_user.First = document.getElementById("user_first").value;

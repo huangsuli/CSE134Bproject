@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <script type="text/javascript" src="../Scripts/menu_manipulator.js"></script>
     <script type="text/javascript" src="../Scripts/pat_db.js"></script>
+    <script type="text/javascript" src="../Scripts/profileValidation.js"></script>
   </head>
   <body>
     <div id="header">
@@ -82,27 +83,35 @@
           <div class="info_container container_spread roboto">
             <div class="form blue_inputs blue_dropbox roboto">
               First Name :<br />
+              <span id="firstname_error" class="error_span"></span>
               <input type="text" id="user_first"/> <br />
 
               Last Name : <br />
+              <span id="lastname_error" class="error_span"></span>
               <input type="text" id="user_last"/> <br />
 
               Email : <br />
+              <span id="email_error" class="error_span"></span>
               <input type="email" id="user_email"/> <br />
 
               Confirm Email : <br />
+              <span id="email_conf_error" class="error_span"></span>
               <input type="email" id="user_email_conf"/> <br />
 
               Old Password : <br />
+              <span id="old_password_error" class="error_span"></span>
               <input type="password" id="user_old_pass"/> <br />
 
               New Password : <br />
+              <span id="new_password_error" class="error_span"></span>
               <input type="password" id="user_new_pass"/> <br />
 
               Confirm New Password : <br />
+              <span id="new_password_conf_error" class="error_span"></span>
               <input type="password" id="user_new_pass_conf"/> <br />
 
               Location : <br />
+              <span id="location_error" class="error_span"></span>
               <input id="input_city" type="text" placeholder="City">
               <select id="user_state">
                 <option value="" selected disabled hidden>States</option>
@@ -160,6 +169,7 @@
               </select> <br/>
 
               Birthday : <br />
+              <span id="year_error" class="error_span"></span>
               <select id="bd_month">
                 <option value="" selected disabled hidden>MM</option>
                 <option value="1">01</option>
@@ -222,9 +232,11 @@
               </select> <br /><br/>
 
               Describe your symptoms and what might be aching : <br />
+              <span id="describe_error" class="error_span"></span>
               <textarea id="symptoms_input" rows="10"></textarea> <br /><br />
 
               Choose the day that works for you : <br />
+              <span id="time_error" class="error_span"></span>
               <div class="form blue_inputs blue_dropbox roboto">
                 <input id="input_date" type="date" name="app_date">
               </div>

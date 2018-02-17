@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <script type="text/javascript" src="../Scripts/menu_manipulator.js"></script>
     <script type="text/javascript" src="../Scripts/doc_db.js"></script>
-
+    <script type="text/javascript" src="../Scripts/profileValidation.js"></script>
   </head>
   <body>
     <div id="header">
@@ -171,6 +171,7 @@
               </select> <br/>
 
               Birthday : <br />
+              <span id="year_error" class="error_span"></span>
               <select id="bd_month">
                 <option value="" selected disabled hidden>MM</option>
                 <option value="1">01</option>
@@ -201,7 +202,6 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
               </select>
-              <span id="year_error" class="error_span"></span>
               <input id="input_year" type="text" maxlength="4" name="input_year" placeholder="YYYY"/> <br />
 
               Gender <br />

@@ -133,9 +133,6 @@ function updateUserInfo() {
   alert("Your information has been updated!");
 }
 
-function verifyEditFields() {
-  return true;
-}
 
 function updateInfo() {
   user.First = document.getElementById("user_first").value;
@@ -201,9 +198,7 @@ function requestAdder() {
   alert("Your request has been submited!");
 }
 
-function verifyRequestFields() {
-  return true;
-}
+
 
 function addRequest() {
   var request = {};
