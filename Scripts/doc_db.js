@@ -205,7 +205,7 @@ function clearEditFields() {
 
 
 function updateUserInfo() {
-  if(!verifyEditFields()) 
+  if(!verifyEditFields())
     return;
 
   updateInfo();
@@ -214,7 +214,9 @@ function updateUserInfo() {
   alert("Your information has been updated!");
 }
 
-
+function verifyEditFields() {
+  return true;
+}
 
 
 function updateInfo() {
