@@ -1,5 +1,5 @@
-function verifyEditFields() {
-  hideAllEditFields();
+function verifyEditFields(signup) {
+  hideAllEditFields(signup);
 
   var error = false;
   var first_name = document.getElementById("user_first").value;
@@ -8,54 +8,69 @@ function verifyEditFields() {
   var email = document.getElementById("user_email").value;
   var email_conf = document.getElementById("user_email_conf").value;
 
-  var old_password = document.getElementById("user_old_pass").value;
+  if(!signup) 
+  	var old_password = document.getElementById("user_old_pass").value;
   var password = document.getElementById("user_new_pass").value;
   var password_conf = document.getElementById("user_new_pass_conf").value;
 
   var location = document.getElementById("input_city").value;
   var year = document.getElementById("input_year").value;
 
-  if(hasNumber(first_name)){
-    inputNotValid("firstname_error", "first name");
-    error = true;
-  }
-  else if(first_name == "") {
+ 
+  if(first_name == "") {
     inputEmpty("firstname_error");
     error = true;
   }
-
-  if(hasNumber(last_name)){
-    inputNotValid("lastname_error", "last name");
+  else if(hasNumber(first_name)){
+    inputNotValid("firstname_error", "first name");
     error = true;
   }
-  else if(first_name == "") {
+
+  if(last_name == "") {
     inputEmpty("lastname_error");
     error = true;
   }
-  
-  if(!email.includes("@") || !email.includes(".")) {
-  	inputNotValid("email_error", "email");
+  else if(hasNumber(last_name)){
+    inputNotValid("lastname_error", "last name");
     error = true;
   }
-  else if(email == "") {
+  
+  
+  
+  if(email == "") {
   	inputEmpty("email_error");
+    error = true;
+  }
+  else if(!email.includes("@") || !email.includes(".")) {
+  	inputNotValid("email_error", "email");
     error = true;
   }
   else if(email != email_conf) {
   	confDifferent("email_conf_error", "email");
   	error = true;
   }
-  
-  if(old_password == ""){
-    inputEmpty("old_password_error");
+
+  if(!signup){
+	  if(old_password == ""){
+	    inputEmpty("old_password_error");
+	    error = true;
+	  }
+  }
+
+  if(password == ""){
+    inputEmpty("new_password_error")
     error = true;
   }
   else if(password != password_conf) {
   	confDifferent("new_password_conf_error", "password");
   	error = true;
   }
-  
-  if(hasNumber(location)){
+
+  if(location == ""){
+    inputEmpty("location_error")
+    error = true;
+  }
+  else if(hasNumber(location)){
     inputNotValid("location_error", "location");
     error = true;
   }
@@ -63,8 +78,12 @@ function verifyEditFields() {
   	inputEmpty("location_error");
   	error = true;
   }
-
-  if(!isNumber(year) || parseInt(year) > 2018 || parseInt(year) < 1900 ) {
+  
+  if(year == ""){
+    inputEmpty("year_error")
+    error = true;
+  }
+  else if(!isNumber(year) || parseInt(year) > 2018 || parseInt(year) < 1900 ) {
   	inputNotValid("year_error", "year");
   	error = true;
   }
@@ -95,14 +114,15 @@ function hideAllRequestFields() {
   document.getElementById("time_error").innerHTML = "";	
 }
 
-function hideAllEditFields(){
+function hideAllEditFields(signup){
   document.getElementById("firstname_error").innerHTML = "";
   document.getElementById("lastname_error").innerHTML = "";
 
   document.getElementById("email_error").innerHTML = "";
   document.getElementById("email_conf_error").innerHTML = "";
 
-  document.getElementById("old_password_error").innerHTML = "";
+  if(!signup)
+  	document.getElementById("old_password_error").innerHTML = "";
   document.getElementById("new_password_conf_error").innerHTML = "";
 
   document.getElementById("location_error").innerHTML = "";

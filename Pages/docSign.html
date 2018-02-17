@@ -7,6 +7,9 @@
     <link rel="stylesheet" type="text/css" href="../Style/CSS/forms_styles.css" >
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script type="text/javascript" src="../Scripts/signup.js"></script>
+    <script type="text/javascript" src="../Scripts/profileValidation.js"></script>
+    <script type="text/javascript" src="../Scripts/clearForm.js"></script>
   </head>
   <body>
 
@@ -36,26 +39,33 @@
           <h2>Sign up form</h2>
         </div>
         <div class="form blue_inputs blue_dropbox roboto">
-          <form action="docProf.html">
+          <form>
           First Name :<br />
-          <input type="text" name="user_first"/> <br />
+          <span id="firstname_error" class="error_span"></span>
+          <input type="text" id="user_first"/> <br />
 
           Last Name : <br />
-          <input type="text" name="user_last"/> <br />
+          <span id="lastname_error" class="error_span"></span> 
+          <input type="text" id="user_last"/> <br />
 
           Email : <br />
-          <input type="email" name="user_email"/> <br />
+          <span id="email_error" class="error_span"></span>
+          <input type="email" id="user_email"/> <br />
 
           Confirm Email : <br />
-          <input type="email" name="user_email_conf"/> <br />
+          <span id="email_conf_error" class="error_span"></span> 
+          <input type="email" id="user_email_conf"/> <br />
 
-          Password : <br />
-          <input type="password" name="user_pass"/> <br />
+          New Password : <br />
+          <span id="new_password_error" class="error_span"></span>
+          <input type="password" id="user_new_pass"/> <br />
 
-          Confirm Password : <br />
-          <input type="password" name="user_pass_conf"/> <br />
+          Confirm New Password : <br />
+          <span id="new_password_conf_error" class="error_span"></span>
+          <input type="password" id="user_new_pass_conf"/> <br />
 
           Location : <br />
+          <span id="location_error" class="error_span"></span>
           <input id="input_city" type="text" name="location" placeholder="City">
           <select name="states">
             <option value="" selected disabled hidden>States</option>
@@ -112,6 +122,7 @@
             <option value="WY">Wyoming</option>
           </select> <br/>
           Birthday : <br/>
+          <span id="year_error" class="error_span"></span>
           <select name="bd_month">
             <option value="" selected disabled hidden>MM</option>
             <option>01</option>
@@ -137,8 +148,8 @@
           <p>Upload Your Doctor Certification :</p>
           <input type="file" name="file" id="file" class="inputfile" />
           <div class="form_button">
-            <input class="medium_blue_r_button" type="submit" value="Sign up"/>
-            <button class="medium_blue_r_button button_left_marg" >Clear Form</button>
+            <input onclick="docSignup()" class="medium_blue_r_button" type="button" value="Sign up"/>
+            <button class="medium_blue_r_button button_left_marg" onclick="clearForm(true)">Clear Form</button>
           </div>
           </form>
         </div>

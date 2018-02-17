@@ -205,7 +205,7 @@ function clearEditFields() {
 
 
 function updateUserInfo() {
-  if(!verifyEditFields())
+  if(!verifyEditFields(false))
     return;
 
   updateInfo();
