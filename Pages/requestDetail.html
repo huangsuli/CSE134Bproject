@@ -22,28 +22,39 @@
     </div>
 
     <div id="body">
-      <div class="article">
+      <div class="article" id="requestInfo">
         <h3 class="article_title"> Patient Information </h3>
         <div class="info_container roboto">
           <table>
             <tr>
               <th>Name</th>
-              <td>James Jones</td>
+              <td id="info_name"></td>
             </tr>
 
             <tr>
                 <th>Age</th>
-                <td>23</td>
+                <td id="info_age"></td>
+            </tr>
+
+            <tr>
+                <th>Email</th>
+                <td id="info_email"></td>
+            </tr>
+
+            <tr>
+              <th>Gender</th>
+              <td id="info_gender"></td>
             </tr>
 
             <tr class="last_tr">
-              <th>Gender</th>
-              <td>Male</td>
+              <th>Date</th>
+              <td id="info_">03/12/2018</td>
             </tr>
 
             </table>
           </div>
         </div>
+
       <div class="article">
         <h3 class="article_title">Symptom Details</h3>
         <p>
@@ -51,23 +62,62 @@
         </p>
       </div>
 
-
-
       <div id="index_choices">
-          <input class="medium_blue_r_button" type="submit" value="Accept"/>
-          <button class="medium_blue_r_button button_left_marg" >Reject</button>
+          <input class="medium_blue_r_button" onclick="acceptRequest()" type="submit" value="Accept"/>
+          <button class="medium_blue_r_button button_left_marg" onclick="rejectRequest()">Reject</button>
 
       </div>
-    </div>
 
+      <div class="article blue_inputs" id="rejectionField" style="display:none;">
+        <h3 class="article_title">Rejection Reason: </h3>
+        Please enter the reason for rejecting this patient:
+        <span class="error_span" id="errorSpan"></span><br>
+        <textarea id="rejectionText" rows="10" cols="40"></textarea><br/>
+
+      <div id="index_choices">
+        <input  onclick = "submitRejection()" class="medium_blue_r_button" type="submit" value="Submit"/>
+        <button onclick = "clearRejectionText()" class="medium_blue_r_button button_left_marg" >Clear</button>
+      </div>
+      </div>
+
+    </div>
     <div id="footer">
       <div id="footer_left">
         &copy; WebMD LLC. All rights reserved 2018.
+      </div>
+      <div id="footer_adapter">
       </div>
       <div id="footer_right">
         <a href="about.html">About us</a>
         <a href="contact.html">Contact us</a>
       </div>
     </div>
+    <script>
+      function acceptRequest(){
+        alert("You have accepted James Jones appoitment for March 12 2018 at 11:30 AM.");
+        window.location.href = "index.html";
+      }
+
+      function rejectRequest() {
+        document.getElementById("requestInfo").style.display = "none";
+        document.getElementById("rejectionField").style.display = "block";
+      }
+
+      function clearRejectionText(){
+        document.getElementById('rejectionText').value = "";
+      }
+
+      function submitRejection(){
+        if(document.getElementById("rejectionText").value == ''){
+          document.getElementById("errorSpan").innerHTML = "<br />Error -- Please fill out rejection reason.";
+        } else {
+          alert("Thank You, James Jones has been notified.");
+          window.location.href = "index.html";
+
+
+        }
+      }
+
+    </script>
   </body>
 </html>
