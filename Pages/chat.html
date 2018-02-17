@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="../Style/CSS/styles.css" />
     <link type="text/css" rel="stylesheet" href="../Style/CSS/chat_styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
   </head>
@@ -23,18 +24,21 @@
 
       <div id="wrapper">
           <div id="chat_menu">
-            <p class="welcome roboto">Welcome, user <b></b></p>
-            <p class="logout roboto"><a id="exit" href="#">Exit Chat</a></p>
+            <p class="welcome roboto" id="welcome_message">Welcome, Mark</p>
+            <p class="logout roboto"><a id="exit" onclick="exitChat()">Exit Chat</a></p>
             <div style="clear:both"></div>
           </div>
 
           <div id="chatbox"></div>
 
-              <form name="message" action="index.html" id="input_form">
+              <form name="message" onkeypress="return event.keyCode != 13" id="input_form">
                   <input name="usermsg" type="text" id="usermsg" size="63"/>
-                  <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+                  <input name="submitmsg" type="button"  id="submitmsg" value="Send" onclick="sendChat()" />
               </form>
       </div>
+      <br />
+          <input id="radio_doctor" name="identity" type="radio" onclick="changeUser(true)"value="doctor" checked/> Doctor
+          <input id="radio_patient" name="identity" type="radio" onclick="changeUser(false)"value="patient"/> Patient <br />
       <br/>
    <div id="footer">
         <div id="footer_left">
@@ -45,5 +49,6 @@
           <a href="contact.html">Contact us</a>
         </div>
       </div>
+  <script type="text/javascript" src="../Scripts/chat.js"></script>
   </body>
 </html>

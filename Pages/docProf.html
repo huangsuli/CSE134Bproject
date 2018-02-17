@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <script type="text/javascript" src="../Scripts/menu_manipulator.js"></script>
+    <script type="text/javascript" src="../Scripts/doc_db.js"></script>
+
   </head>
   <body>
     <div id="header">
@@ -42,37 +44,33 @@
           <table>
             <tr>
               <th>Name</th>
-              <td>Mark Young, MD</td>
+              <td id="info_name"></td>
             </tr>
 
             <tr>
               <th>Title</th>
-              <td>Family Medicine</td>
+              <td id="info_title"></td>
             </tr>
 
             <tr>
               <th>Location</th>
-              <td>San Diego, CA</td>
+              <td id="info_location"></td>
             </tr>
 
             <tr>
               <th>Date of birth</th>
-              <td>01/01/1977</td>
+              <td id="info_bday"></td>
             </tr>
 
             <tr>
               <th>Email</th>
-              <td>my1977@email.com</td>
+              <td id="info_email"></td>
             </tr>
 
-            <tr>
-              <th>Phone Number</th>
-              <td>858-699-1111</td>
-            </tr>
 
             <tr class="last_tr">
               <th>Gender</th>
-              <td>Male</td>
+              <td id="info_gender"></td>
 
             </tr>
 
@@ -87,14 +85,37 @@
           <div class="info_container container_spread roboto">
             <div class="form blue_inputs blue_dropbox roboto">
               First Name :<br />
-              <input type="text" name="user_first"/> <br />
+              <span id="firstname_error" class="error_span"></span>
+              <input type="text" id="user_first"/> <br />
 
               Last Name : <br />
-              <input type="text" name="user_last"/> <br />
+              <span id="lastname_error" class="error_span"></span>
+              <input type="text" id="user_last"/> <br />
+
+              Email : <br /> 
+              <span id="email_error" class="error_span"></span>
+              <input type="email" id="user_email"/> <br />
+
+              Confirm Email : <br />
+              <span id="email_conf_error" class="error_span"></span>
+              <input type="email" id="user_email_conf"/> <br />
+
+              Old Password : <br />
+              <span id="old_password_error" class="error_span"></span>
+              <input type="password" id="user_old_pass"/> <br />
+
+              New Password : <br />
+              <span id="new_password_error" class="error_span"></span>
+              <input type="password" id="user_new_pass"/> <br />
+
+              Confirm New Password : <br />
+              <span id="new_password_conf_error" class="error_span"></span>
+              <input type="password" id="user_new_pass_conf"/> <br />
 
               Location : <br />
+              <span id="location_error" class="error_span"></span>
               <input id="input_city" type="text" name="location" placeholder="City">
-              <select name="states">
+              <select id="user_state">
                 <option value="" selected disabled hidden>States</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -150,31 +171,46 @@
               </select> <br/>
 
               Birthday : <br />
-              <select name="bd_month">
+              <select id="bd_month">
                 <option value="" selected disabled hidden>MM</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-                <option>05</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
               </select>
-              <select name="bd_day">
+              <select id="bd_day">
                 <option value="" selected disabled hidden>DD</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-                <option>05</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
               </select>
-              <input id="input_year" type="text" maxlength="4" name="bd_year" placeholder="YYYY"/> <br />
+              <span id="year_error" class="error_span"></span>
+              <input id="input_year" type="text" maxlength="4" name="input_year" placeholder="YYYY"/> <br />
 
               Gender <br />
-              <input type="radio" name="gender" value="male" checked/> Male
-              <input type="radio" name="gender" value="female"/> Female <br />
+              <input type="radio" id="radio_male" name="gender" value="male" checked/> Male
+              <input type="radio" id="radio_female" name="gender" value="female"/> Female <br />
 
               <div class="form_button">
-                <input class="medium_blue_r_button" type="submit" value="Update"/>
-                <button class="medium_blue_r_button button_left_marg" >Clear Form</button>
+                <input onclick="updateUserInfo()" class="medium_blue_r_button" type="submit" value="Update"/>
+                <button onclick="clearEditFields()" class="medium_blue_r_button button_left_marg" >Clear Form</button>
               </div>
 
             </div>
@@ -186,33 +222,7 @@
           <h3>Pending Requests</h3>
         </div>
         <div class="info_container roboto">
-          <table>
-            <tr>
-              <td>#</td>
-              <th>Date</th>
-              <th>Patients</th>
-              <th></th>
-            </tr>
-            <tr>
-              <th>3</th>
-              <td>12/05/2017</td>
-              <td>James Jones</td>
-              <td><button class="medium_blue_r_button table_button" onclick="window.location.href='requestDetail.html'" >Details</button></td>
-            </tr>
-
-            <tr>
-              <th>2</th>
-              <td>06/15/2017</td>
-              <td>Alex Kim</td>
-              <td><button class="medium_blue_r_button table_button" onclick="window.location.href='requestDetail.html' ">Details</button></td>
-            </tr>
-
-            <tr>
-              <th>1</th>
-              <td>10/29/2016</td>
-              <td>Sam Wan</td>
-              <td><button class="medium_blue_r_button table_button" onclick="window.location.href='requestDetail.html' ">Details</button></td>
-            </tr>
+          <table id="pendingTable">
           </table>
         </div>
       </div>
@@ -222,33 +232,7 @@
           <h3>Accepted Requests</h3>
         </div>
         <div class="info_container roboto">
-          <table>
-            <tr>
-              <td>#</td>
-              <th>Date</th>
-              <th>Patients</th>
-              <th></th>
-            </tr>
-            <tr>
-              <th>3</th>
-              <td>12/05/2017</td>
-              <td>James Jones</td>
-              <td><button class="medium_blue_r_button table_button" onclick="window.location.href='chat.html' ">Chat</button></td>
-            </tr>
-
-            <tr>
-              <th>2</th>
-              <td>06/15/2017</td>
-              <td>Alex Kim</td>
-              <td><button class="medium_blue_r_button table_button" onclick="window.location.href='chat.html' ">Chat</button></td>
-            </tr>
-
-            <tr>
-              <th>1</th>
-              <td>10/29/2016</td>
-              <td>Sam Wan</td>
-              <td><button class="medium_blue_r_button table_button" onclick="window.location.href='chat.html' ">Chat</button></td>
-            </tr>
+          <table id="acceptedTable">
           </table>
         </div>
       </div>
@@ -257,38 +241,8 @@
         <div class="article_title">
           <h3>Request History</h3>
         </div>
-        <div class="info_container roboto">
-          <table>
-            <tr>
-              <td>#</td>
-              <th>Date</th>
-              <th>Patients</th>
-              <th>Status</th>
-              <th></th>
-            </tr>
-            <tr>
-              <th>3</th>
-              <td>12/05/2017</td>
-              <td>Mark Young</td>
-              <td>&#9745; Completed</td>
-              <td><button class="medium_blue_r_button table_button" >Manage</button></td>
-            </tr>
-
-            <tr>
-              <th>2</th>
-              <td>06/15/2017</td>
-              <td>John Selvester</td>
-              <td>&#9745; Completed</td>
-              <td><button class="medium_blue_r_button table_button" >Manage</button></td>
-            </tr>
-
-            <tr>
-              <th>1</th>
-              <td>10/29/2016</td>
-              <td>Monica Guntaler</td>
-              <td>&#9746; Rejected</td>
-              <td><button class="medium_blue_r_button table_button" >Manage</button></td>
-            </tr>
+        <div  class="info_container roboto">
+          <table id="historyTable">
           </table>
         </div>
       </div>
@@ -305,5 +259,12 @@
         <a href="contact.html">Contact us</a>
       </div>
     </div>
+     <script>
+      showDocUserInformation();
+      setEditFields();
+      rejectedFiller(true);
+      pendingFiller();
+      acceptedFiller();
+    </script>
   </body>
 </html>

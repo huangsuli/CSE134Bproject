@@ -38,7 +38,6 @@ a:hover { text-decoration:underline; }
 #loginform p { margin: 5px; }
   
 #chatbox {
-    text-align:left;
     margin:0 auto;
     margin-bottom:25px;
     padding:10px;
@@ -46,7 +45,16 @@ a:hover { text-decoration:underline; }
     height:270px;
     width:430px;
     border:1px solid #ACD8F0;
-    overflow:auto; }
+    overflow:auto; 
+}
+
+#chatbox #patient{
+    text-align:right;
+}
+
+#chatbox #doctor{
+    text-align:left;
+}
   
 #usermsg {
     width:395px;
