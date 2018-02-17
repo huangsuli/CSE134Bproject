@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../Style/CSS/calendar_styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script type="text/javascript" src="../Scripts/menu_manipulator.js"></script>
   </head>
   <body>
     <div id="header">
@@ -23,18 +24,17 @@
 
     <div id="menu">
       <div id="menu_container">
-        <a href="#pr">Profile</a>
-        <a href="#ei">Edit Profile</a>
-        <a href="#rf">Pending Requests</a>
-        <a href="#fe">Accepted Requests</a>
-        <a href="#rh">Request History</a>
+        <a onclick="showProfileDiv('profile')">Profile</a>
+        <a onclick="showProfileDiv('editProfile')">Edit Profile</a>
+        <a onclick="showProfileDiv('pendingRequest')">Pending Requests</a>
+        <a onclick="showProfileDiv('acceptedRequests')">Accepted Requests</a>
+        <a onclick="showProfileDiv('requestHistory')">Request History</a>
       </div>
     </div>
 
     <div id="body">
 
-      <a id="pr"></a>
-      <div class="article">
+      <div class="article" id="profile">
         <div class="article_title">
           <h3>Doctor Profile information</h3>
         </div>
@@ -80,8 +80,7 @@
           </div>
         </div>
 
-        <a id="ei"></a>
-        <div class="article">
+        <div class="article" style="display:none;" style="display:none;" id="editProfile">
           <div class="article_title">
             <h3>Edit Information</h3>
           </div>
@@ -182,8 +181,7 @@
           </div>
       </div>
 
-      <a id="rf"></a>
-      <div class="article">
+      <div class="article" style="display:none;" id="pendingRequest">
         <div class="article_title">
           <h3>Pending Requests</h3>
         </div>
@@ -219,8 +217,7 @@
         </div>
       </div>
 
-      <a id="fe"></a>
-      <div class="article">
+      <div class="article" style="display:none;" id="acceptedRequests">
         <div class="article_title">
           <h3>Accepted Requests</h3>
         </div>
@@ -255,8 +252,8 @@
           </table>
         </div>
       </div>
-      <a id="rh"></a>
-      <div class="article">
+
+      <div class="article" style="display:none;" id="requestHistory">
         <div class="article_title">
           <h3>Request History</h3>
         </div>
