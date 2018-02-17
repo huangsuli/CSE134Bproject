@@ -41,6 +41,9 @@ var requests = [
     },
     doctorName: "Monica Guntaler",
     symptoms: "",
+    log: ["You submitted a request to Monica Guntaler.",
+      "Monica Guntaler reviewed request.",
+      "Monica Guntaler rejected request, reason: <br />\"Patient does not provide enough information.\""],
     status: 0
   },
   {
@@ -56,6 +59,14 @@ var requests = [
     },
     doctorName: "John Selvester",
     symptoms: "",
+    log: ["You submitted a request to John Selvester",
+      "John Selvester reviewed request.",
+      "John Selvester accepted request.",
+      "John Selvester set a chat meeting at 06/15/2017 4:20 PM",
+      "Chatted with John Selvester",
+      "Chat log: <br />\"CHAT LOG HERE\"",
+      "John Selvester left a comment and rated the conversation",
+      "You left a comment and rated the conversation"],
     status: 1
   },
   {
@@ -71,6 +82,7 @@ var requests = [
     },
     doctorName: "Mark Young",
     symptoms: "",
+    log: ["You submitted a request to Mark Young"],
     status: 2
   }
 ];
@@ -103,13 +115,18 @@ function clearEditFields() {
   document.getElementById("user_last").value = "";
   document.getElementById("user_email").value = "";
   document.getElementById("user_email_conf").value = "";
-  document.getElementById("user_city").value = "";
-  docu
-date:ment.getElementById("input_year").value = "";
+  document.getElementById("input_city").value = "";
+  document.getElementById("user_state").value = "";
+  document.getElementById("bd_month").value = "";
+  document.getElementById("bd_day").value = "";
+  document.getElementById("input_year").value = "";
+  document.getElementById("radio_male").checked = "";
+  document.getElementById("input_year").value = "";
 }
 
 function updateUserInfo() {
-  verifyEditFields();
+  if(!verifyEditFields())
+    return;
   updateInfo();
   showUserInformation();
   showProfileDiv("profile");
@@ -117,7 +134,7 @@ function updateUserInfo() {
 }
 
 function verifyEditFields() {
-
+  return true;
 }
 
 function updateInfo() {
@@ -137,12 +154,32 @@ function historyFiller() {
   document.getElementById("historyTable").innerHTML =
   "<tr>    <td>#</td>    <th>Date</th>    <th>Doctor</th>    <th>Status</th> </tr>";
 
+  var idName;
+  var todoList;
   for (i = requests.length-1; i >= 0; i--) {
+    idName = "request_" + (i+1);
+    todoList = "<li class=\"list_title\">History Log</li>";
+    for (j = 0; j < requests[i].log.length; j++) {
+      todoList +=
+      "<li>" +
+      requests[i].log[j] +
+      "</li>";
+    }
     document.getElementById("historyTable").innerHTML +=
+      "<tr onmouseover=\"showList('" + idName + "');\" onmouseout=\"hideList('"+idName+"');\">" +
       "<th>"+ (i+1) +"</th>" +
       "<td>"+ requests[i].date.toString() +"</td>" +
       "<td>"+ requests[i].doctorName +"</td>" +
-      "<td>"+ setStatus(requests[i].status) +"</td>";
+      "<td>"+ setStatus(requests[i].status) +
+      "<ul id="+ idName +" class=\"todo_list\" style=\"display:none;\">" +
+      todoList +
+      "</ul>" +
+      "</td>" +
+      "</tr>";
+    console.log("init:" + document.getElementById(idName).className);
+     document.getElementById(idName).className = "todo_list";
+     console.log("after:" + document.getElementById(idName).className);
+
   }
 }
 
@@ -159,7 +196,7 @@ function requestAdder() {
   if (!verifyRequestFields())
     return;
   addRequest();
-  historyFiller(false);
+  historyFiller();
   showProfileDiv("requestHistory");
   alert("Your request has been submited!");
 }
@@ -184,4 +221,18 @@ function addRequest() {
   request.status = "2";
 
   requests.push(request);
+}
+
+function showUserInformationRequest() {
+  document.getElementById("info_name").innerHTML = user.fullName();
+  document.getElementById("info_age").innerHTML = 2018 - user.Birthday.Year;
+  document.getElementById("info_email").innerHTML = user.Email;
+  document.getElementById("info_gender").innerHTML = (user.Gender == 0) ? "Male" : "Female";
+}
+
+function showList(divName) {
+  document.getElementById(divName).style.display= "block";
+}
+function hideList(divName) {
+  document.getElementById(divName).style.display= "none";
 }

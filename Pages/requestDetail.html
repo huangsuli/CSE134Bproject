@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../Style/CSS/info_styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script type="text/javascript" src="../Scripts/pat_db.js"></script>
   </head>
   <body>
     <div id="header">
@@ -62,10 +63,11 @@
         </p>
       </div>
 
+      <div id="firstButtons">
       <div id="index_choices">
           <input class="medium_blue_r_button" onclick="acceptRequest()" type="submit" value="Accept"/>
           <button class="medium_blue_r_button button_left_marg" onclick="rejectRequest()">Reject</button>
-
+      </div>
       </div>
 
       <div class="article blue_inputs" id="rejectionField" style="display:none;">
@@ -94,12 +96,13 @@
     </div>
     <script>
       function acceptRequest(){
-        alert("You have accepted James Jones appoitment for March 12 2018 at 11:30 AM.");
+        alert("You have accepted " + user.fullName() + " appointment for 03/12/2018");
         window.location.href = "index.html";
       }
 
       function rejectRequest() {
         document.getElementById("requestInfo").style.display = "none";
+        document.getElementById("firstButtons").style.display = "none";
         document.getElementById("rejectionField").style.display = "block";
       }
 
@@ -111,12 +114,14 @@
         if(document.getElementById("rejectionText").value == ''){
           document.getElementById("errorSpan").innerHTML = "<br />Error -- Please fill out rejection reason.";
         } else {
-          alert("Thank You, James Jones has been notified.");
+          alert("Thank You, " + user.fullName() + " has been notified.");
           window.location.href = "index.html";
 
 
         }
       }
+
+      showUserInformationRequest();
 
     </script>
   </body>

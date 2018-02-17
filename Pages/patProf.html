@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../Style/CSS/styles.css">
     <link rel="stylesheet" href="../Style/CSS/forms_styles.css">
     <link rel="stylesheet" href="../Style/CSS/calendar_styles.css">
+    <link rel="stylesheet" href="../Style/CSS/todolist_styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <script type="text/javascript" src="../Scripts/menu_manipulator.js"></script>
@@ -33,7 +34,6 @@
     </div>
 
     <div id="body">
-
       <div class="article" id="profile">
         <div class="article_title">
           <h3>Patient Profile information</h3>
@@ -292,7 +292,7 @@
           <h3>Request History</h3>
         </div>
         <div class="info_container roboto">
-          <table id="historyTable">
+          <table id="historyTable" >
           </table>
         </div>
       </div>
@@ -312,7 +312,7 @@
     <script>
       showUserInformation();
       setEditFields();
-      historyFiller(true);
+      historyFiller();
     </script>
   </body>
 </html>
