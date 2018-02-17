@@ -207,10 +207,12 @@ function verifyRequestFields() {
 
 function addRequest() {
   var request = {};
+  var date = retrieveDate();
+  console.log(date);
   request.date = {
-    Day: 10,
-    Month: 29,
-    Year: 2016,
+    Day: parseInt(date[2]),
+    Month: parseInt(date[1]),
+    Year: parseInt(date[0]),
     toString: function()
     {
       return this.Day + "/" + this.Month + "/" + this.Year;
@@ -218,6 +220,7 @@ function addRequest() {
   };
   request.doctorName = document.getElementById("doctor_names").value;
   request.symptoms = document.getElementById("symptoms_input").value;
+  request.log = ["You submitted a request to " + document.getElementById("doctor_names").value];
   request.status = "2";
 
   requests.push(request);
@@ -235,4 +238,8 @@ function showList(divName) {
 }
 function hideList(divName) {
   document.getElementById(divName).style.display= "none";
+}
+
+function retrieveDate() {
+  return document.getElementById("input_date").value.split("-");
 }
